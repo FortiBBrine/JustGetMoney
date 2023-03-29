@@ -1,0 +1,4 @@
+name: JustGetMoney
+version: '${project.version}'
+main: me.FortiBrine.JustGetMoney.Main
+api-version: 1.16

@@ -1,0 +1,9 @@
+kill:
+  ZOMBIE: 2
+break:
+  WHEAT: 1
+can_damage_by:
+  - WOODEN_SWORD
+messages:
+  kill: "Ты убил %mob и получил %money"
+  break: "Ты сломал %block и получил %money"
