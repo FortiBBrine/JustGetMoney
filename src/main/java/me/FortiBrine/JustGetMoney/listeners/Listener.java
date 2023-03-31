@@ -24,6 +24,7 @@ public class Listener implements org.bukkit.event.Listener {
 
         for (String key : config.getConfigurationSection("break").getKeys(false)) {
             BigInteger count = new BigInteger( config.getString("break."+key, "0") );
+
             if (event.getBlock().getType().name().equalsIgnoreCase(key)) {
                 BalanceManager.pay(player.getName(), count);
 
@@ -75,6 +76,7 @@ public class Listener implements org.bukkit.event.Listener {
 
         for (String key : config.getConfigurationSection("kill").getKeys(false)) {
             BigInteger count = new BigInteger( config.getString("kill."+key, "0") );
+
             if (event.getEntityType().name().equalsIgnoreCase(key)) {
                 BalanceManager.pay(player.getName(), count);
 
