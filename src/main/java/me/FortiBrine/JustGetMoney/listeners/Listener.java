@@ -74,6 +74,14 @@ public class Listener implements org.bukkit.event.Listener {
 
         Player player = event.getEntity().getKiller();
 
+        if (player == null) {
+            return;
+        }
+
+        if (player.getName() == null) {
+            return;
+        }
+
         for (String key : config.getConfigurationSection("kill").getKeys(false)) {
             BigInteger count = new BigInteger( config.getString("kill."+key, "0") );
 
